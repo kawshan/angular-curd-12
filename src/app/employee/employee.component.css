@@ -1,0 +1,19 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.btnReset{
+  background-color: red;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.btnSubmit{
+  background-color: green;
+}
+
+.btnGo{
+  background-color: dodgerblue;
+}

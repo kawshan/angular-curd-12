@@ -1,0 +1,102 @@
+<!--button section start-->
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-8 text-end">
+    <button mat-fab extended routerLink="/employee-list" class="btnGo">
+      <mat-icon>arrow_forward_ios</mat-icon>
+      go to employee table
+    </button>
+  </div>
+</div>
+<!--button section end-->
+
+
+<!--employee module start-->
+<div class="card mt-5" style="padding: 5%; margin: 5%; border-color: darkgreen">
+
+  <form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Employee id</mat-label>
+      <input matInput placeholder="Ex . emp001" disabled name="employeeId" [(ngModel)]="employee.employeeId">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Employee Name</mat-label>
+      <input matInput placeholder="Ex . Jhon Wick" name="employeeName" [(ngModel)]="employee.employeeName">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Employee Address</mat-label>
+      <input matInput placeholder="Ex . emp001" name="employeeAddress" [(ngModel)]="employee.employeeAddress">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Employee Contact Number</mat-label>
+      <input matInput placeholder="Ex . emp001" name="employeeContactNUmber" [(ngModel)]="employee.employeeContactNUmber">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Employee Skills</mat-label>
+      <input matInput placeholder="Ex . emp001" name="employeeSkills" [(ngModel)]="employee.employeeSkills">
+    </mat-form-field>
+
+
+    <mat-radio-group  aria-label="Select an option">
+      <mat-label>Employee gender</mat-label>
+      <mat-radio-button [checked]="employee.employeeGender == 'M' "  (click)="selectGender('M')">M</mat-radio-button>
+      <mat-radio-button [checked]="employee.employeeGender == 'F' "  (click)="selectGender('F')">F</mat-radio-button>
+    </mat-radio-group>
+
+
+
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select name="employeeDepartment" [(ngModel)]="employee.employeeDepartment">
+        <mat-option>None</mat-option>
+        <mat-option value="it">it</mat-option>
+        <mat-option value="network">network</mat-option>
+        <mat-option value="repair">repair</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+    <div class="mt-5">
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <button type="reset" mat-fab extended class="btnReset">
+            <mat-icon>close</mat-icon>
+            reset
+          </button>
+        </div>
+
+
+        <div class="col-md-6 text-end">
+          <button mat-fab extended class="btnSubmit">
+            <mat-icon>add</mat-icon>
+            Add
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+  </form>
+</div>
+<!--employee module end-->
+
